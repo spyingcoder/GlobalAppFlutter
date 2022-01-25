@@ -9,7 +9,7 @@ class IntroScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Globo Fitness'),
+        title: Text('Global App'),
       ),
       drawer: MenuDrawer(),
       bottomNavigationBar: MenuBottom(),
@@ -27,7 +27,7 @@ class IntroScreen extends StatelessWidget {
               color: Colors.white70,
             ),
             child: Text(
-              'Commit to be fit,dare to be great\nWith Globo Fitness',
+              'Enjoy all cool mobile app features\nwith Global App',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 22, shadows: [
                 Shadow(
