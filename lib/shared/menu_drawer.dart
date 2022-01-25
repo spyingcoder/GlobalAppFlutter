@@ -5,7 +5,7 @@ import '../screens/intro_screen.dart';
 import '../screens/bmi_screen.dart';
 
 class MenuDrawer extends StatelessWidget {
-  const MenuDrawer({Key? key}) : super(key: key);
+  const MenuDrawer({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,10 +24,18 @@ class MenuDrawer extends StatelessWidget {
       'Training',
     ];
     List<Widget> menuItems = [];
-    menuItems.add(DrawerHeader(
-        decoration: BoxDecoration(color: Colors.blueGrey),
-        child: Text('Globo Fitness',
-            style: TextStyle(color: Colors.white, fontSize: 28))));
+    menuItems.add(
+      DrawerHeader(
+        decoration: BoxDecoration(color: Colors.blueGrey[900]),
+        child: Text(
+          'Globo Fitness',
+          style: TextStyle(
+            color: Colors.cyan[700],
+            fontSize: 28,
+          ),
+        ),
+      ),
+    );
     menuTiles.forEach((String element) {
       Widget screen = Container();
       menuItems.add(ListTile(

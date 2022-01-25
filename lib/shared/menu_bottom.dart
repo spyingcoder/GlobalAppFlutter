@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class MenuBottom extends StatelessWidget {
   const MenuBottom({
-    Key? key,
+    Key key,
   }) : super(key: key);
 
   @override

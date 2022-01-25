@@ -3,7 +3,7 @@ import '../data/sp_helper.dart';
 import '../data/session.dart';
 
 class SessionsScreen extends StatefulWidget {
-  const SessionsScreen({Key? key}) : super(key: key);
+  const SessionsScreen({Key key}) : super(key: key);
   @override
   _SessionsScreenState createState() => _SessionsScreenState();
 }

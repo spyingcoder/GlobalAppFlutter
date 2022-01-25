@@ -3,7 +3,7 @@ import 'package:getting_started_with_flutter/shared/menu_drawer.dart';
 import '../shared/menu_bottom.dart';
 
 class IntroScreen extends StatelessWidget {
-  const IntroScreen({Key? key}) : super(key: key);
+  const IntroScreen({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
