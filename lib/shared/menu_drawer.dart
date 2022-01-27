@@ -30,7 +30,7 @@ class MenuDrawer extends StatelessWidget {
       DrawerHeader(
         decoration: BoxDecoration(color: Colors.purple[900]),
         child: Text(
-          'Globo Fitness',
+          'Global App',
           style: TextStyle(
             color: Colors.cyan[700],
             fontSize: 28,
