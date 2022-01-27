@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:getting_started_with_flutter/shared/menu_drawer.dart';
 import '../data/sp_helper.dart';
 import '../data/session.dart';
 
@@ -25,6 +26,7 @@ class _SessionsScreenState extends State<SessionsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: MenuDrawer(),
       appBar: AppBar(
         title: Text('Your Training Sessions'),
       ),

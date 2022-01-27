@@ -28,7 +28,7 @@ class MenuDrawer extends StatelessWidget {
     List<Widget> menuItems = [];
     menuItems.add(
       DrawerHeader(
-        decoration: BoxDecoration(color: Colors.blueGrey[900]),
+        decoration: BoxDecoration(color: Colors.purple[900]),
         child: Text(
           'Globo Fitness',
           style: TextStyle(

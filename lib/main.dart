@@ -15,19 +15,16 @@ class GlobeApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        appBarTheme: AppBarTheme(color: Colors.blueGrey[900]),
-        primarySwatch: Colors.blueGrey,
-        drawerTheme: DrawerThemeData(
-          backgroundColor: Colors.blueGrey,
-        ),
+        appBarTheme: AppBarTheme(color: Colors.purple[700]),
+        primarySwatch: Colors.purple,
+        drawerTheme: DrawerThemeData(backgroundColor: Colors.purple[200]),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            primary: Colors.blueGrey[900],
+            primary: Colors.purple[900],
           ),
         ),
-        backgroundColor: Colors.blueGrey,
-        primaryColor: Colors.blueGrey,
-        
+        backgroundColor: Colors.purple,
+        primaryColor: Colors.purple,
       ),
       routes: {
         '/': (context) => IntroScreen(),

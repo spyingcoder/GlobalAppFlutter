@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:getting_started_with_flutter/data/weather.dart';
+import 'package:getting_started_with_flutter/shared/menu_drawer.dart';
 import '../data/http_helper.dart';
 
 class WeatherScreen extends StatefulWidget {
@@ -15,6 +16,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: MenuDrawer(),
       appBar: AppBar(
         title: Text('Weather'),
       ),
