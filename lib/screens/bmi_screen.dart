@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:getting_started_with_flutter/shared/menu_drawer.dart';
 import '../shared/menu_bottom.dart';
-
-// import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class BmiScreen extends StatefulWidget {
   const BmiScreen({Key key}) : super(key: key);
@@ -14,6 +13,7 @@ class BmiScreen extends StatefulWidget {
 class _BmiScreenState extends State<BmiScreen> {
   final TextEditingController _heightController = TextEditingController();
   final TextEditingController _weightController = TextEditingController();
+  final String _url = 'https://en.wikipedia.org/wiki/Body_mass_index';
 
   final healthyBmiRange = SnackBar(
     content: const Text("Healthy BMI range: 18.5 kg/m² to 25 kg/m²"),

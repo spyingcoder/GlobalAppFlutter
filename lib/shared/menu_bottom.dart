@@ -14,12 +14,16 @@ class MenuBottom extends StatelessWidget {
             Navigator.pushNamed(context, '/');
             break;
           case 1:
+            Navigator.pushNamed(context, '/assistant');
+            break;
+          case 2:
             Navigator.pushNamed(context, '/bmi');
             break;
         }
       },
       items: [
         BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+        BottomNavigationBarItem(icon: Icon(Icons.add), label: 'Assistant'),
         BottomNavigationBarItem(icon: Icon(Icons.monitor_weight), label: 'BMI'),
       ],
     );

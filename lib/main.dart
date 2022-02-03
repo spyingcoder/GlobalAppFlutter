@@ -1,6 +1,7 @@
 // @dart=2.9
 import 'package:flutter/material.dart';
 import 'package:getting_started_with_flutter/screens/bmi_screen.dart';
+import 'package:getting_started_with_flutter/screens/voice_assistant.dart';
 import 'screens/intro_screen.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class GlobeApp extends StatelessWidget {
       theme: ThemeData(
         appBarTheme: AppBarTheme(color: Colors.purple[700]),
         primarySwatch: Colors.purple,
-        drawerTheme: DrawerThemeData(backgroundColor: Colors.purple[200]),
+        drawerTheme: DrawerThemeData(backgroundColor: Colors.white),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             primary: Colors.purple[900],
@@ -29,6 +30,7 @@ class GlobeApp extends StatelessWidget {
       routes: {
         '/': (context) => IntroScreen(),
         '/bmi': (context) => BmiScreen(),
+        '/assistant': (context) => VoiceAssistant(),
       },
       initialRoute: '/',
     );
