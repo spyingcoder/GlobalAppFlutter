@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:getting_started_with_flutter/screens/new_screen.dart';
 import 'package:getting_started_with_flutter/screens/sessions_screen.dart';
+import 'package:getting_started_with_flutter/screens/simple_interest.dart';
 import 'package:getting_started_with_flutter/screens/voice_assistant.dart';
 import 'package:getting_started_with_flutter/screens/weather_screen.dart';
 import '../screens/intro_screen.dart';
@@ -26,15 +28,17 @@ class MenuDrawer extends StatelessWidget {
       'Know More about BMI',
       'Weather',
       'Training',
+      'SI Calculator',
       'Currency Convertor',
       'Voice Assistant'
+          'New Screen',
     ];
     List<Widget> menuItems = [];
     menuItems.add(
       DrawerHeader(
         decoration: BoxDecoration(color: Colors.blue),
         child: Text(
-          'Global App', 
+          'Global App',
           style: TextStyle(
             color: Colors.white,
             fontSize: 28,
@@ -46,40 +50,52 @@ class MenuDrawer extends StatelessWidget {
       (String element) {
         Widget screen = Container();
         menuItems.add(
-          ListTile(
-            title: Text(
-              element,
-              style: TextStyle(fontSize: 18),
+          SingleChildScrollView(
+            child: Column(
+              children: [
+                ListTile(
+                  title: Text(
+                    element,
+                    style: TextStyle(fontSize: 18),
+                  ),
+                  onTap: () {
+                    switch (element) {
+                      case 'Home':
+                        screen = IntroScreen();
+                        break;
+                      case 'BMI Calculator':
+                        screen = BmiScreen();
+                        break;
+                      case 'Know More about BMI':
+                        launch(_url);
+                        break;
+                      case 'Weather':
+                        screen = WeatherScreen();
+                        break;
+                      case 'Training':
+                        screen = SessionsScreen();
+                        break;
+                      case 'SI Calculator':
+                        screen = SICal();
+                        break;
+                      case 'Currency Convertor':
+                        screen = CurrencyConversion();
+                        break;
+                      case 'Voice Assistant':
+                        screen = VoiceAssistant();
+                        break;
+                      case 'New Screen':
+                        screen = New();
+                        break;
+                    }
+                    Navigator.of(context).pop();
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => screen),
+                    );
+                  },
+                ),
+              ],
             ),
-            onTap: () {
-              switch (element) {
-                case 'Home':
-                  screen = IntroScreen();
-                  break;
-                case 'BMI Calculator':
-                  screen = BmiScreen();
-                  break;
-                case 'Know More about BMI':
-                  launch(_url);
-                  break;
-                case 'Weather':
-                  screen = WeatherScreen();
-                  break;
-                case 'Training':
-                  screen = SessionsScreen();
-                  break;
-                case 'Currency Convertor':
-                  screen = CurrencyConversion();
-                  break;
-                case 'Voice Assistant':
-                  screen = VoiceAssistant();
-                  break;
-              }
-              Navigator.of(context).pop();
-              Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => screen),
-              );
-            },
           ),
         );
       },

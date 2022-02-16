@@ -18,7 +18,7 @@ class GlobeApp extends StatelessWidget {
       theme: ThemeData(
         appBarTheme: AppBarTheme(color: Colors.purple[700]),
         primarySwatch: Colors.purple,
-        drawerTheme: DrawerThemeData(backgroundColor: Colors.white),
+        drawerTheme: const DrawerThemeData(backgroundColor: Colors.white,),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             primary: Colors.purple[900],
